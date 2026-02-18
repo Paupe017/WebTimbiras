@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐺 Manada de Lobatos - G.S. Timbiras</title>
+    <style>
+        :root {
+            --scout-red: #f2a6a6;
+            --scout-yellow: #fdf2a7;
+            --scout-orange: #ffd8b1;
+            --text-dark: #2d2d2d;
+            --text-light: #f4f4f4;
+            --color-manada: #ffde00; 
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #fffcf9;
+        }
+        header {
+            background-color: var(--text-dark);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--scout-yellow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--text-dark);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #3d3d3d;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        nav a:hover {
+            color: var(--scout-orange);
+        }
+        .header-seccion { background-color: var(--color-manada); color: var(--text-dark); padding: 2rem 0; text-align: center; }
+        .info-container { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        .card { border-top: 8px solid var(--color-manada); border-radius: 8px; padding: 20px; flex: 1; min-width: 300px; background-color: #f9f9f9; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card h2 { color: var(--text-dark); margin-top: 0; }
+        .lema { font-style: italic; font-weight: bold; text-align: center; font-size: 1.2em; margin: 20px 0; color: var(--text-dark); }
+        .quote-container { background-color: rgba(255, 255, 255, 0.9); padding: 15px; border-radius: 8px; display: inline-block; border: 1px solid var(--color-manada); }
+        .btn-volver { display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: var(--color-manada); color: var(--text-dark); text-decoration: none; border-radius: 5px; font-weight: bold; border: 1px solid var(--scout-orange); }
+        footer { background-color: var(--text-dark); color: #aaa; text-align: center; padding: 2rem; font-size: 0.9rem; margin-top: 40px; }
+        
+        .seisena-card {
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+        .rojo { background-color: #e57373; }
+        .azul { background-color: #64b5f6; }
+        .verde { background-color: #81c784; }
+        .amarillo { background-color: #ffd54f; color: #333; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">G.S. Timbiras</div>
+        <img src="/fotos/logotimbiras.jpeg" alt="Logo Timbiras" style="border-radius: 50%; object-fit: cover; height: 4em; border: 2px solid var(--scout-yellow); position: absolute; left: 50%; transform: translateX(-50%);">
+        
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                    <div class="dropdown-content">
+                        <a href="historia.html">Nuestra Historia</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="nosotros.html">Nosotros</a>
+                    <div class="dropdown-content">
+                        <a href="castores.html">Castores</a>
+                        <a href="manada.html">Manada</a>
+                        <a href="tropa.html">Tropa</a>
+                        <a href="clan.html">Clan</a>
+                    </div>
+                </li>
+                <li><a href="Kraal.html">Nuestro Kraal</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header-seccion">
+        <h1 style="margin: 0; letter-spacing: 2px; text-transform: uppercase;">Manada de Lobatos</h1>
+    </div>
+
+    <main style="padding: 20px;">
+        <p class="lema">"Haremos lo mejor"</p>
+
+        <div class="info-container">
+            <div class="card">
+                <h2>¿Quiénes son los Lobatos?</h2>
+                <p>La Manada de Lobatos acoge a niños y niñas de entre <b>8 y 11 años</b>. En esta etapa, el juego sigue siendo el motor principal, pero se introduce una mayor estructura y el inicio del compromiso personal a través de la Ley de la Manada.</p>
+            </div>
+
+            <div class="card">
+                <h2>El Libro de la Selva</h2>
+                <p>Siguiendo la metodología de <b>Scouts Valencians</b>, la Manada se sumerge en el universo de Rudyard Kipling. A través de la ambientación de la selva, los lobatos aprenden valores, autonomía y trabajo en equipo.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 1rem;">
+                <article>
+                    <h3>Lema</h3>
+                    <p><strong>"Haremos lo mejor"</strong>: Un compromiso de superación personal diaria en todo lo que hacen.</p>
+                </article>
+                
+                <article>
+                    <h3>La Ley de la Manada</h3>
+                    <ul>
+                        <li>El lobato escucha al Viejo Lobo.</li>
+                        <li>El lobato se vence a sí mismo.</li>
+                    </ul>
+                </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-container">
+            <div class="card">
+                <h2>Nuestras Seisenas</h2>
+                <p>La Manada se divide en pequeños grupos llamados <b>Seisenas</b>. En nuestro grupo contamos con:</p>
+                <div class="grid-seisenas" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 10px;">
+                    <div class="seisena-card rojo">Seisena Roja</div>
+                    <div class="seisena-card azul">Seisena Azul</div>
+                    <div class="seisena-card verde">Seisena Verde</div>
+                    <div class="seisena-card amarillo">Seisena Amarilla</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Progresión Personal</h2>
+                <p>El camino del lobato se marca por etapas de crecimiento representadas por huellas:</p>
+                <ul>
+                    <li><b>Huella de Akela:</b> Integración en la manada.</li>
+                    <li><b>Huella de Baloo:</b> Participación y aprendizaje.</li>
+                    <li><b>Huella de Bagheera:</b> Compromiso y servicio.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <div class="quote-container">
+                <p style="margin: 0;"><i>"El lobato es un amigo de todos y un hermano de cualquier otro lobato."</i></p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="nosotros.html" class="btn-volver">Volver a Secciones</a>
+        </div>
+    </main>
+    <footer>
+        <p>Grupo Scout Timbiras &copy; 2026</p>
+        <p>
+            <a href="https://maps.app.goo.gl/BJvMSSThUq8fSNRE6" style="color: #aaa;">📍 Sede del Grupo</a> | 📧 scoutstimbiras341@gmail.com
+        </p>
+    </footer>
+</body>
+</html>

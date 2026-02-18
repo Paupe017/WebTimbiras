@@ -1,0 +1,31 @@
+
+:root {
+  --scouts-azul: #00549f;
+  --scouts-naranja-castores: #f39200;
+  --scouts-blanco: #ffffff;
+  --scouts-gris-oscuro: #333333;
+  --scouts-fondo: #f4f4f4;
+}
+
+body {
+  background-color: var(--scouts-fondo);
+  color: var(--scouts-gris-oscuro);
+  font-family: sans-serif;
+}
+
+header {
+  background-color: var(--scouts-naranja-castores);
+  color: var(--scouts-blanco);
+  padding: 20px;
+  border-bottom: 5px solid var(--scouts-azul);
+}
+
+button {
+  background-color: var(--scouts-azul);
+  color: var(--scouts-blanco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 

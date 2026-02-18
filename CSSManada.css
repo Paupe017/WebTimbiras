@@ -1,0 +1,72 @@
+/* Colores Scouts Valencians - Manada */
+:root {
+  --amarillo-manada: #ffde00;
+  --azul-scout: #003366;
+  --blanco: #ffffff;
+  --gris-oscuro: #333333;
+  --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-principal);
+  background-color: #f4f4f4;
+  color: var(--gris-oscuro);
+}
+
+header {
+  background-color: var(--amarillo-manada);
+  color: var(--azul-scout);
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 5px solid var(--azul-scout);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: var(--blanco);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+  color: var(--azul-scout);
+}
+
+button, .btn {
+  background-color: var(--azul-scout);
+  color: var(--amarillo-manada);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #004a94;
+  color: var(--blanco);
+}
+
+.card {
+  border-left: 10px solid var(--amarillo-manada);
+  background: #fffbe6;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0 5px 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--blanco);
+  background-color: var(--azul-scout);
+  margin-top: 3rem;
+}

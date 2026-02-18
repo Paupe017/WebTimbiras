@@ -1,0 +1,70 @@
+:root {
+  --sv-azul: #004077;       
+  --sv-amarillo: #ffcc00;   
+  --sv-blanco: #ffffff;
+  --sv-gris-claro: #f4f4f4;
+  --sv-texto: #333333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("fotos gstimbiras aída/nusflordelys.jpeg");
+  color: var(--sv-texto);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--sv-azul);
+  color: var(--sv-blanco);
+  padding: 1rem 2rem;
+  border-bottom: 5px solid var(--sv-amarillo);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--sv-amarillo);
+  color: var(--sv-azul);
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+}
+
+.card {
+  background: var(--sv-blanco);
+  border-left: 8px solid var(--sv-azul);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: var(--sv-blanco);
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--sv-amarillo);
+}
+
+footer {
+  background-color: var(--sv-azul);
+  color: var(--sv-blanco);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.8rem;
+}

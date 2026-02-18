@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Secciones - Grupo Scout Timbiras</title>
+    <style>
+        :root {
+            --scout-yellow: #fdf2a7; 
+            --scout-orange: #ffd8b1; 
+            --scout-red: #f2a6a6;    
+            --text-dark: #2d2d2d;    
+            --bg-light: #fffcf9;     
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-image: url('/fotos/flordelys2.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: var(--text-dark);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--scout-yellow);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        /* Estilos para el Desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--text-dark);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        nav a:hover {
+            color: var(--scout-orange);
+        }
+
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        .branch-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .branch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 5%;
+            gap: 4rem;
+        }
+
+        .branch:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .branch-content {
+            flex: 1;
+        }
+
+        .branch-image {
+            flex: 1;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+        }
+
+        .branch-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .branch-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .branch-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .age-badge {
+            background-color: var(--scout-red);
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .motto {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            display: block;
+        }
+
+        .description {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-card {
+            background-color: #f9f9f9;
+            border-top: 5px solid var(--scout-orange);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .castores .branch-title { color: var(--text-dark); }
+        .lobatos .branch-title { color: #d48a8a; } 
+        .scout .branch-title { color: #e6b382; }   
+        .escultas .branch-title { color: #d48a8a; }
+        .rovers .branch-title { color: var(--text-dark); }
+
+        @media (max-width: 768px) {
+            .branch, .branch:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                padding: 3rem 5%;
+            }
+            .branch-image {
+                width: 100%;
+                height: 250px;
+            }
+            .branch-title {
+                justify-content: center;
+            }
+        }
+
+        .section-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: #aaa;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">G.S. Timbiras</div>
+        <img src="/fotos/logotimbiras.jpeg" alt="Logo Timbiras" style="border-radius: 50%; object-fit: cover; height: 4em; border: 2px solid var(--scout-yellow);">
+        
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html">Inicio</a>
+                    <div class="dropdown-content">
+                        <a href="historia.html">Nuestra Historia</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="nosotros.html">Nosotros</a>
+                    <div class="dropdown-content">
+                        <a href="castores.html">Castores</a>
+                        <a href="manada.html">Manada</a>
+                        <a href="tropa.html">Tropa</a>
+                        <a href="clan.html">Clan</a>
+                    </div>
+                </li>
+                <li><a href="Kraal.html">Nuestro Kraal</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="text-align: center; padding: 2rem 0; color: white; background-color: rgba(45, 45, 45, 0.8);">
+        <h1 style="margin: 0; font-size: 2.5rem;">Nuestras Ramas</h1>
+        <p style="margin: 0.5rem 0 0; font-size: 1.2rem;">Un camino de crecimiento adaptado a cada edad</p>
+    </div>
+
+    <div class="branch-container">
+
+        <section class="branch castores">
+            <div class="branch-content section-card">
+                <h2 class="branch-title">Colonia de Castores <span class="age-badge" style="background-color: #add8e6; color: #2d2d2d;">6 - 8 Años</span></h2>
+                <span class="motto">Lema: "Compartir"</span>
+                <div class="info-card">
+                    <p class="description">
+                        Es la primera etapa del escultismo. Aquí los más pequeños aprenden a jugar en grupo, a compartir y descubren la alegría de hacer amigos.
+                    </p>
+                </div>
+                <div class="info-card" style="border-top-color: var(--scout-yellow);">
+                    <strong>🦫 Ambientación:</strong> "Los Amigos del Bosque" y la vida en el estanque.
+                </div>
+                <a href="castores.html" class="age-badge" style="display: inline-block; margin-top: 0.5rem; text-decoration: none; background-color: #add8e6; color: #2d2d2d;">Saber más sobre los Castores</a>
+            </div>
+            <div class="branch-image">
+                <img src="/fotos/fotocastors.jpeg" alt="Castores">
+            </div>
+            
+        </section>
+
+        <section class="branch lobatos">
+            <div class="branch-content section-card">
+                <h2 class="branch-title">Manada de Lobatos <span class="age-badge" style="background-color: #ffde00; color: #333;">8 - 11 Años</span></h2>
+                <span class="motto">Lema: "Haremos lo mejor"</span>
+                <div class="info-card">
+                    <p class="description">
+                        A través del juego y la imaginación, los lobatos aprenden a vivir en comunidad, respetando las reglas y cuidando unos de otros.
+                    </p>
+                </div>
+                <div class="info-card" style="border-top-color: var(--scout-yellow);">
+                    <strong>🐺 Ambientación:</strong> "El Libro de la Selva". Akela y Baloo son sus guías.
+                </div>
+                <a href="manada.html" class="age-badge" style="display: inline-block; margin-top: 0.5rem; text-decoration: none; background-color: #ffde00; color: #333;">Saber más sobre la Manada</a>
+            </div>
+            <div class="branch-image">
+                <img src="/fotos/fotomanada.jpeg" alt="Lobatos">
+            </div>
+        </section>
+
+        <section class="branch scout">
+            <div class="branch-content section-card">
+                <h2 class="branch-title">Tropa Scout <span class="age-badge" style="background-color: #90ee90; color: #2d2d2d;">11 - 14 Años</span></h2>
+                <span class="motto">Lema: "Siempre Listos"</span>
+                <div class="info-card">
+                    <p class="description">
+                        Comienza la gran aventura. Se organizan en Patrullas, asumen responsabilidades, acampan y exploran la naturaleza.
+                    </p>
+                </div>
+                <div class="info-card" style="border-top-color: var(--scout-yellow);">
+                    <strong>⚜️ Ambientación:</strong> La Aventura y el Sistema de Patrullas.
+                </div>
+                <a href="tropa.html" class="age-badge" style="display: inline-block; margin-top: 0.5rem; text-decoration: none; background-color: #90ee90; color: #2d2d2d;">Saber más sobre la Tropa</a>
+            </div>
+            <div class="branch-image">
+                <img src="/fotos/fototropa.jpeg" alt="Tropa Scout">
+            </div>
+        </section>
+
+        <section class="branch rovers">
+            <div class="branch-content section-card">
+                <h2 class="branch-title">Clan Rover <span class="age-badge" style="background-color: #d32f2f; color: white;">17 - 21 Años</span></h2>
+                <span class="motto">Lema: "Servir"</span>
+                <div class="info-card">
+                    <p class="description">
+                        El Rover se prepara para su vida adulta basando sus decisiones en valores y realizando un servicio real a la sociedad.
+                    </p>
+                </div>
+                <div class="info-card" style="border-top-color: var(--scout-yellow);">
+                    <strong>🛶 Ambientación:</strong> La Ruta y el Servicio.
+                </div>
+                <a href="clan.html" class="age-badge" style="display: inline-block; margin-top: 0.5rem; text-decoration: none; background-color: #d32f2f;">Saber más sobre el Clan</a>
+            </div>
+            <div class="branch-image">
+                <img src="/fotos/fotoclan.jpeg" alt="Clan Rover">
+            </div>
+        </section>
+
+    </div>
+    <footer>
+        <p>Grupo Scout Timbiras &copy; 2026</p>
+        <p>
+            <a href="https://maps.app.goo.gl/BJvMSSThUq8fSNRE6" style="color: #aaa;">📍 Sede del Grupo</a> | 📧 scoutstimbiras341@gmail.com
+        </p>
+    </footer>
+
+
+
+</body>
+</html>
